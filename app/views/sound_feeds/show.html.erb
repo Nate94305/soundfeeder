@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sound:</strong>
+  <%= @sound_feed.sound %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @sound_feed.owner %>
+</p>
+
+<%= link_to 'Edit', edit_sound_feed_path(@sound_feed) %> |
+<%= link_to 'Back', sound_feeds_path %>

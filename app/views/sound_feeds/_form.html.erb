@@ -1,0 +1,25 @@
+<%= form_for(@sound_feed) do |f| %>
+  <% if @sound_feed.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sound_feed.errors.count, "error") %> prohibited this sound_feed from being saved:</h2>
+
+      <ul>
+      <% @sound_feed.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sound %><br>
+    <%= f.text_field :sound %>
+  </div>
+  <div class="field">
+    <%= f.label :owner %><br>
+    <%= f.text_field :owner %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

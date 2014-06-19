@@ -1,0 +1,29 @@
+<h1>Listing sound_feeds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sound</th>
+      <th>Owner</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sound_feeds.each do |sound_feed| %>
+      <tr>
+        <td><%= sound_feed.sound %></td>
+        <td><%= sound_feed.owner %></td>
+        <td><%= link_to 'Show', sound_feed %></td>
+        <td><%= link_to 'Edit', edit_sound_feed_path(sound_feed) %></td>
+        <td><%= link_to 'Destroy', sound_feed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sound feed', new_sound_feed_path %>
